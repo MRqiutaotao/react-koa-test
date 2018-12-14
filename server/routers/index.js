@@ -1,13 +1,18 @@
+import { db } from "../db";
 export default function(Router) {
-	const router = new Router();
-	router.get("/",async (ctx,next) => {
-        await ctx.render('index',{
-            title:"管理系统"
-        })
-	})
-	router.get("/test",async (ctx,next) => {
-		ctx.response.body="<h1>test</h1>"
-	})
+  const router = new Router();
+  router.get("/", async (ctx, next) => {
+    ctx.response.body = "hello world";
+  });
+  router.get("/api/getlist", async (ctx, next) => {
+    const collection = db.get("message");
+    const list = await collection.findOne({ name: "message" });
+    ctx.response.body = {
+      code: "200",
+      message: "success",
+      data: list.list
+    };
+  });
 
-	return router.routes()
+  return router.routes();
 }

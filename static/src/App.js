@@ -1,13 +1,23 @@
-import React,{Component} from "react";
+import React, { Component } from "react";
+import RootRouter from "./Router";
+import { Link } from "react-router-dom";
 
-import Message from "./components/Message.js"
-
- export default class App extends Component {
-     render () {
-         return (
-            <div>
-                <Message name="小明"/>
-            </div>
-        )
-     }
- }
+export default class App extends Component {
+  render() {
+    return (
+      <div>
+        <ul>
+          <li>
+            <Link to="/">主页</Link>
+          </li>
+          <li>
+            <Link to="/message">消息</Link>
+          </li>
+        </ul>
+        <div>
+          <RootRouter />
+        </div>
+      </div>
+    );
+  }
+}

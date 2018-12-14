@@ -9,6 +9,7 @@
     "dll": "webpack --config webpack.config.dll.js --mode=production"
   },
   "dependencies": {
+    "axios": "^0.18.0",
     "babel-cli": "^6.26.0",
     "babel-core": "^6.26.2",
     "babel-loader": "^7.1.4",
@@ -32,10 +33,12 @@
     "less": "^3.0.2",
     "less-loader": "^4.1.0",
     "mini-css-extract-plugin": "^0.4.0",
+    "monk": "^6.0.6",
     "nodemon": "^1.17.3",
     "os": "^0.1.1",
-    "react": "^16.3.2",
-    "react-dom": "^16.3.2",
+    "react": "^16.6.3",
+    "react-dom": "^16.6.3",
+    "react-router-dom": "^4.3.1",
     "webpack": "^4.6.0"
   },
   "devDependencies": {
